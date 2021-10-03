@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iWhite">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:clipToPadding="false"
+        android:layout_below="@+id/top">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/c_r_upper_20"
+            android:paddingLeft="5dp">
+
+            <ImageView
+                android:id="@+id/addCategory"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:elevation="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/c_r_upper_10"
+                android:tint="@color/iBlue"
+                android:src="@drawable/vector_add_dark"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_top"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:layout_toRightOf="@+id/addCategory"
+                android:layoutAnimation="@anim/rv_right_to_left"/>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_lay"
+        android:background="@drawable/c_tr_tl_white_10"/>
+
+</RelativeLayout>

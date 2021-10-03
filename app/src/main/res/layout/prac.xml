@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="60dp"
+        android:paddingBottom="55dp"
+        android:overScrollMode="never"
+        android:clipToPadding="false"
+        android:background="@color/root"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/emoji_iv"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:elevation="3dp"
+        android:background="@drawable/c_r_upper_15"
+        android:layout_toLeftOf="@+id/send_iv"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/c_r_root_10"
+            android:elevation="2dp"
+            android:visibility="visible"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:id="@+id/reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/vector_reply"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/reply">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mait Akash"
+                    android:layout_marginTop="5dp"
+                    android:paddingRight="30dp"
+                    android:textColor="@color/colorSahasraha"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ooh bhai ye dekh"
+                    android:textColor="@color/txt1"
+                    android:maxLines="3"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="30dp"
+                    android:layout_below="@id/uname"/>
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/vector_close"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="7dp"
+                    android:paddingTop="7dp"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <com.vanniktech.emoji.EmojiEditText
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxHeight="150dp"
+            android:hint="Type a message"
+            android:drawableRight="@drawable/vector_add_sahasraha"
+            android:background="@drawable/c_r_upper_15"
+            android:paddingRight="10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="8dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/emoji_iv"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:padding="5dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/emoji_ios_category_smileysandpeople"
+        android:tint="@color/colorSahasraha"
+        android:layout_alignParentBottom="true"/>
+
+
+    <ImageView
+        android:id="@+id/send_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/vector_back_dark"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:rotation="180"/>
+
+</RelativeLayout>

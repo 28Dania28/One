@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root"
+    tools:context=".UniteMyProfile">
+
+
+
+    <FrameLayout
+        android:id="@+id/pf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/setting_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="10dp"
+        android:elevation="20dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/vector_setting_sahasraha"
+        android:background="@drawable/c_tl_bl_white_40"
+        android:layout_marginTop="40dp" />
+
+</RelativeLayout>

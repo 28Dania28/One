@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/user"/>
+
+    <item
+        android:id="@+id/find_buddy"
+        android:title="Search"
+        android:icon="@drawable/search_glass_high"/>
+
+    <item
+        android:id="@+id/story"
+        android:title="Story"
+        android:iconTint="@color/colorSahasraha"
+        android:icon="@drawable/vector_stories"/>
+
+    <item
+        android:id="@+id/chat"
+        android:title="Chats"
+        android:icon="@drawable/chatbubble"/>
+
+
+    <item
+        android:id="@+id/add"
+        android:title="Add"
+        android:iconTint="@color/iBlue"
+        android:icon="@drawable/vector_add_dark"/>
+
+</menu>

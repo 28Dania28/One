@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/upper"
+    android:paddingTop="5dp"
+    tools:context=".UniteStories">
+
+    <!--    android:paddingTop="35dp"-->
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/user"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:tag="User"
+            android:transitionName="transition_pp"
+            fresco:roundAsCircle="true"/>
+
+        <ImageView
+            android:id="@+id/mode"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/sun"/>
+
+        <TextView
+            android:id="@+id/story_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stories"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/mode"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:textColor="@color/txt3"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@+id/pp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:elevation="5dp"
+            android:background="@drawable/c_r_dynamic_10"
+            android:transitionName="add_transition"
+            android:src="@drawable/vector_add_dynamic"/>
+
+    </RelativeLayout>
+
+
+    <HorizontalScrollView
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="30dp"
+        android:background="@drawable/c_tr_tl_dynamic_20"
+        android:clipToPadding="false"
+        android:layout_below="@+id/top">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:minWidth="300dp"
+            android:paddingLeft="5dp">
+
+            <ImageView
+                android:id="@+id/searchCategory"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:elevation="5dp"
+                android:padding="3dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/c_r_first_10"
+                android:src="@drawable/vector_category3"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_top"
+                android:layout_width="wrap_content"
+                android:minWidth="300dp"
+                android:layout_height="70dp"
+                android:clipToPadding="false"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/searchCategory"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/c_tr_br_transparent_40"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:layoutAnimation="@anim/rv_right_to_left"/>
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_lay"
+        android:layout_marginTop="-20dp"
+        android:elevation="10dp"
+        android:background="@drawable/c_tr_tl_upper_20">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:elevation="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="80dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:layoutAnimation="@anim/rv_up_to_down_overshoot"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

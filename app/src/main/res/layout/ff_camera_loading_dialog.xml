@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:id="@+id/lay1">
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/earth_loading"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/moving_earth"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detecting Faces"
+        android:layout_below="@+id/lay1"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:fontFamily="monospace"/>
+
+    <Button
+        android:id="@+id/retake"
+        android:visibility="gone"
+        android:layout_below="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Retake"
+        android:textColor="@color/online_green"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:background="@drawable/c_r_upper_10"/>
+
+</RelativeLayout>

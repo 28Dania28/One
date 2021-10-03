@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:elevation="10dp"
+    android:background="@drawable/c_r_upper_25">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/left_section">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:orientation="vertical"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            app:cardCornerRadius="25dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                fresco:viewAspectRatio="0.6428"
+                fresco:actualImageScaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Jan, 2019"
+            android:layout_below="@+id/cv"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/txt1"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/left_section"
+        android:layout_width="80dp"
+        android:layout_height="260dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/c_r_shaded_white_25"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/txt1"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/vector_view"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

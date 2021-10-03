@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:background="@color/upper1"
+    tools:context=".UniteChatsSearch">
+
+    <RelativeLayout
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            app:iconifiedByDefault="false"
+            app:searchIcon="@null"
+            android:transitionName="sv_transition"
+            app:queryBackground="@color/Transparent"
+            app:queryHint="Search Users..."
+            android:layout_toLeftOf="@+id/sv_btn"/>
+
+        <ImageView
+            android:id="@+id/sv_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:transitionName="sv_iv_transition"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vector_search_dark"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_lay"
+        android:background="@drawable/c_tr_tl_root_10">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:background="@drawable/c_tr_tl_root_10"
+            android:layoutAnimation="@anim/rv_up_to_down_overshoot"
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

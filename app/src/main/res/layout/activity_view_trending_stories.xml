@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ViewTrendingStories">
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/csv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:clipToPadding="false"/>
+
+    <TextView
+        android:id="@+id/finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:text="Finish"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/colorSahasraha"/>
+
+    <TextView
+        android:id="@+id/promoted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Promoted"
+        android:layout_marginTop="50dp"
+        android:elevation="50dp"
+        android:visibility="gone"
+        android:textColor="@color/colorAnahata"
+        android:shadowColor="#55000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:fontFamily="@font/aldrich"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/demoted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Demoted"
+        android:layout_marginBottom="50dp"
+        android:elevation="50dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorMuladhara"
+        android:visibility="gone"
+        android:shadowColor="#55000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:fontFamily="@font/aldrich"
+        android:textSize="25sp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:lottie_rawRes="@raw/loadinground"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+</RelativeLayout>

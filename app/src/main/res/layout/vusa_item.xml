@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/c_r_15_black">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/story_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:roundedCornerRadius="15dp"
+        android:scaleType="centerCrop" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/story_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        fresco:actualImageScaleType="fitCenter"
+        android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:id="@+id/controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/btm_rl"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/categories"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/c_r_translucent_white20_7"
+            android:text="C"
+            android:shadowColor="#55000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/colorManipura"
+            android:textStyle="bold"/>
+
+
+        <ImageView
+            android:id="@+id/tags"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:padding="7dp"
+            android:background="@drawable/c_r_translucent_white20_7"
+            android:elevation="10dp"
+            android:src="@drawable/vector_person_tag"/>
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:padding="7dp"
+            android:background="@drawable/c_r_translucent_white20_7"
+            android:elevation="10dp"
+            android:src="@drawable/vector_location_mark"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/btm_rl"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:elevation="2dp"
+        android:layout_alignParentBottom="true">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/user"
+            android:elevation="10dp"
+            fresco:roundAsCircle="true"/>
+
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 h "
+            android:textColor="@color/iWhite"
+            android:textSize="12sp"
+            android:shadowColor="#55000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

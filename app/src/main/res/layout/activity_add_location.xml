@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root"
+    tools:context=".AddLocation">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="5dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/c_r_upper_10">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/vector_back_dark"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <Button
+            android:id="@+id/addLocationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Location"
+            android:transitionName="addLoc"
+            android:textStyle="bold"
+            android:gravity="left|center_vertical"
+            android:textAllCaps="false"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/colorMuladhara"
+            android:drawableLeft="@drawable/vector_location"
+            android:background="@color/upper"
+            android:layout_toRightOf="@+id/back"
+            android:textColor="@color/txt1"/>
+
+        <Button
+            android:id="@+id/doneBtn"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Done"
+            android:background="@color/transparent"
+            android:layout_alignParentRight="true"
+            android:textAllCaps="false"
+            android:textColor="@color/txt2"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:iconifiedByDefault="false"
+        android:visibility="invisible"
+        android:layout_marginTop="5dp"
+        app:searchIcon="@drawable/vector_search_grey"
+        android:transitionName="sv_transition"
+        android:layout_below="@+id/rl_top"
+        app:queryBackground="@color/Transparent"
+        app:queryHint="Search Places..."/>
+
+    <fragment android:id="@+id/autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+        />
+
+
+</RelativeLayout>

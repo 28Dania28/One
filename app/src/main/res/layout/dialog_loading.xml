@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/c_r_20_translucent_white"
+    android:padding="15dp">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/earth_loading"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/moving_earth"
+        android:layout_centerHorizontal="true"/>
+
+
+</LinearLayout>

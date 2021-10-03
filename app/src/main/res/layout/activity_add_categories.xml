@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root"
+    tools:context=".AddCategories">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="5dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/c_r_upper_10">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/vector_back_dark"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+
+        <Button
+            android:id="@+id/addCatBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Categories"
+            android:transitionName="addCat"
+            android:textStyle="bold"
+            android:gravity="left|center_vertical"
+            android:textAllCaps="false"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/colorManipura"
+            android:layout_toRightOf="@+id/back"
+            android:drawableLeft="@drawable/vector_add_dark"
+            android:background="@color/upper"
+            android:textColor="@color/txt1"/>
+
+
+        <Button
+            android:id="@+id/doneBtn"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="Done"
+            android:background="@color/transparent"
+            android:enabled="false"
+            android:layout_alignParentRight="true"
+            android:textAllCaps="false"
+            android:textColor="@color/txt2"/>
+
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:iconifiedByDefault="false"
+        android:layout_marginTop="5dp"
+        app:searchIcon="@drawable/vector_search_grey"
+        android:transitionName="sv_transition"
+        android:layout_below="@+id/rl_top"
+        app:queryBackground="@color/Transparent"
+        app:queryHint="Search Categories..."/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:layout_below="@+id/sv"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
+        android:layoutAnimation="@anim/rv_right_to_left"/>
+
+    <RelativeLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/rv_top"
+        android:background="@color/line"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_below="@id/lay1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:fadingEdge="horizontal"
+                android:fadingEdgeLength="20dp"
+                android:requiresFadingEdge="vertical"
+                android:layoutAnimation="@anim/rv_right_to_left"/>
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:layout_below="@id/rv_search"
+                android:textColor="@color/txt1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:fadingEdge="horizontal"
+                android:layout_below="@+id/txt"
+                android:fadingEdgeLength="20dp"
+                android:requiresFadingEdge="vertical"
+                android:layoutAnimation="@anim/rv_right_to_left"/>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

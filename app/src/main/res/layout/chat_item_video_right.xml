@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="right">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="5dp"
+        android:background="@drawable/c_r_sahasraha_10">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/top"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                fresco:actualImageScaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.vanniktech.emoji.EmojiTextView
+            android:id="@+id/msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:maxWidth="200dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="18dp"
+        android:gravity="right|center_vertical">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/txt2"
+            android:textSize="10sp"/>
+
+        <RelativeLayout
+            android:id="@+id/status"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/o_sahasraha"
+            android:backgroundTint="@color/colorAnahata"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

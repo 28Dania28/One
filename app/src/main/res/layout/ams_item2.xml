@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginRight="40dp"
+       android:layout_marginLeft="40dp"
+       android:layout_marginTop="25dp"
+       android:layout_marginBottom="25dp"
+       android:elevation="10dp"
+       android:background="@drawable/c_r_upper_25">
+
+       <TextView
+           android:id="@+id/date"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="1 Jan, 2019"
+           android:layout_marginTop="20dp"
+           android:layout_centerHorizontal="true"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:textColor="@color/txt1"/>
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cv"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:cardElevation="10dp"
+           android:layout_centerHorizontal="true"
+           android:layout_below="@+id/date"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="50dp"
+           android:layout_marginRight="50dp"
+           android:layout_marginBottom="30dp"
+           android:padding="10dp"
+           app:cardCornerRadius="25dp">
+
+           <com.facebook.drawee.view.SimpleDraweeView
+               android:id="@+id/iv"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               fresco:viewAspectRatio="0.6428"
+               fresco:actualImageScaleType="centerCrop"/>
+
+           <RelativeLayout
+               android:layout_width="25dp"
+               android:layout_height="25dp"
+               android:layout_margin="20dp"
+               android:background="@drawable/c_r_translucent_white_7">
+
+               <TextView
+                   android:id="@+id/stories_no"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text=""
+                   android:textSize="15sp"
+                   android:layout_centerInParent="true"
+                   android:textStyle="bold"
+                   android:textColor="@color/white"/>
+
+           </RelativeLayout>
+
+       </androidx.cardview.widget.CardView>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/cv"
+           android:padding="10dp"
+           android:background="@drawable/c_r_shaded_white_25">
+
+           <TextView
+               android:id="@+id/views"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="0"
+               android:layout_centerHorizontal="true"
+               android:textColor="@color/txt1"
+               android:textStyle="bold"/>
+
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_marginTop="2dp"
+               android:layout_below="@+id/views"
+               android:layout_centerHorizontal="true"
+               android:src="@drawable/vector_view"/>
+
+
+       </RelativeLayout>
+
+   </RelativeLayout>
+
+</RelativeLayout>

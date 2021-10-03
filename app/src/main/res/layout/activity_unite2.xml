@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root"
+    tools:context=".Unite2">
+
+    <com.dania.one.NonSwipeableViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"/>
+
+    <LinearLayout
+        android:id="@+id/btm_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/c_r_upper_20"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="5dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/search_btn"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:hapticFeedbackEnabled="true"
+            android:padding="10dp"
+            android:src="@drawable/search_glass_high"/>
+
+        <ImageView
+            android:id="@+id/stories_btn"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:tint="@color/colorSahasraha"
+            android:src="@drawable/vector_stories"/>
+
+        <ImageView
+            android:id="@+id/chats_btn"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/chatbubble"/>
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root"
+    tools:context=".Login">
+
+
+    <RelativeLayout
+        android:id="@+id/dns_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/one_logo"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dns_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dns_logo"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" D "
+            android:textColor="@color/colorSahasraha"
+            android:fontFamily="@font/fontdiner_swanky"
+            android:textStyle="bold"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a"
+            android:textColor="@color/colorManipura"
+            android:fontFamily="@font/fontdiner_swanky"
+            android:textStyle="bold"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" n "
+            android:textColor="@color/colorVishuddha"
+            android:fontFamily="@font/fontdiner_swanky"
+            android:textStyle="bold"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fontdiner_swanky"
+            android:text="i"
+            android:textColor="@color/colorAnahata"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" a "
+            android:textColor="@color/colorMuladhara"
+            android:fontFamily="@font/fontdiner_swanky"
+            android:textStyle="bold"
+            android:textSize="40sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_lay"
+        android:layout_marginBottom="70dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/google_btn"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:background="@drawable/c_r_upper_20"
+            android:padding="10dp"
+            android:elevation="10dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/googleicon"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/bottom_lay"
+        android:background="@color/upper3"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@color/upper4"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Copyright © 2020 Dania"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

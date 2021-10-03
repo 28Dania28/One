@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    app:cardCornerRadius="15dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/upper">
+
+        <ImageView
+            android:id="@+id/pp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/txt6"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bond"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Bond"
+            android:textSize="12sp"
+            android:layout_margin="10dp"
+            android:textColor="@color/online_green"
+            android:background="@drawable/c_r_first_20"
+            android:layout_below="@id/name_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageView
+            android:id="@+id/bonded"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/name_layout"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:elevation="3dp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:background="@drawable/o_white"
+            android:src="@drawable/vector_check"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

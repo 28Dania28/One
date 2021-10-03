@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:gravity="center"
+    tools:context=".Radius">
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/c_r_upper_25"
+        android:padding="15dp"
+        android:elevation="10dp"
+        android:inputType="number"
+        android:layout_margin="20dp"
+        android:hint="Enter Radius Range"/>
+
+    <ImageView
+        android:id="@+id/btn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/vector_check"
+        android:background="@drawable/o_white"
+        android:elevation="10dp"
+        android:padding="10dp"/>
+
+</LinearLayout>

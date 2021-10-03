@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".UniteSendMediaMessage">
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"/>
+
+
+    <VideoView
+        android:id="@+id/vv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vector_back_dark"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/pp"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:transitionName="user_pp"
+            android:padding="10dp"
+            android:layout_toRightOf="@+id/back"
+            android:layout_centerVertical="true"
+            android:src="@color/white"/>
+
+
+        <ImageView
+            android:id="@+id/crop"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/vector_crop_white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/transparent_black_percent_20"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/emoji_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/emoji_ios_category_smileysandpeople"
+            android:tint="@color/white"/>
+
+
+        <com.vanniktech.emoji.EmojiEditText
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxHeight="150dp"
+            android:hint="Add a caption"
+            android:paddingRight="10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="7dp"
+            android:textColor="@color/iWhite"
+            android:textColorHint="@color/iWhite"
+            android:elevation="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/c_r_transparent_15"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/emoji_iv"
+            android:layout_toLeftOf="@+id/send_iv"/>
+
+        <ImageView
+            android:id="@+id/send_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/vector_back_dark"
+            android:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:padding="2dp"
+            android:layout_alignParentRight="true"
+            android:rotation="180"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

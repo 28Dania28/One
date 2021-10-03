@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".UniteAdd">
+
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tint="@color/iBlue"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vector_back_dark"/>
+
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add a Story"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="25sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/iBlue"/>
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:transitionName="add_transition"
+            android:elevation="5dp"
+            android:background="@drawable/c_r_upper_10"
+            android:tint="@color/iBlue"
+            android:src="@drawable/vector_add_dark"/>
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/top"
+        android:gravity="left">
+
+        <Button
+            android:id="@+id/captureImage"
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:text="Capture Image"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="16sp"
+            android:background="@drawable/c_r_upper_15"
+            android:drawableLeft="@drawable/vector_capture_photo"
+            android:textColor="@color/colorVishuddha"/>
+
+        <Button
+            android:id="@+id/captureVideo"
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:text="Capture Video"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:background="@drawable/c_r_upper_15"
+            android:drawableLeft="@drawable/vector_video_anahata"
+            android:textColor="@color/colorAnahata"/>
+
+        <Button
+            android:id="@+id/gallary"
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:text="Pick from Gallary"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="16sp"
+            android:background="@drawable/c_r_upper_15"
+            android:drawableLeft="@drawable/vector_gallary"
+            android:textColor="@color/colorManipura"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

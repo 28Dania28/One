@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:background="@color/deepRoot"
+    tools:context=".UniteSearch">
+
+    <RelativeLayout
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            app:iconifiedByDefault="false"
+            app:searchIcon="@null"
+            android:transitionName="sv_transition"
+            app:queryBackground="@color/Transparent"
+            app:queryHint="Search Users..."
+            android:layout_toLeftOf="@+id/search_btn"/>
+
+        <ImageView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vector_search_dark"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/top2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/c_r_dynamic_20"
+        android:elevation="5dp"
+        android:clipToPadding="false"
+        android:layout_below="@+id/top_lay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp">
+
+            <ImageView
+                android:id="@+id/addCategory"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:elevation="5dp"
+                android:padding="3dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/c_r_first_10"
+                android:src="@drawable/vector_add_dark"/>
+
+           <RelativeLayout
+                android:id="@+id/nearby_item"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/catIcon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="5dp"
+                    android:src="@drawable/nearby_logo"
+                    android:layout_marginTop="12dp"/>
+
+                <TextView
+                    android:id="@+id/catLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nearby"
+                    android:textColor="@color/txt3"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="10sp"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_top"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:clipToPadding="false"
+                android:layout_marginLeft="5dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:layoutAnimation="@anim/rv_right_to_left"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_marginTop="-30dp"
+        android:paddingTop="30dp"
+        android:background="@color/root"
+        android:layout_below="@+id/top2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:background="@color/root"
+                android:layoutAnimation="@anim/rv_up_to_down_overshoot"
+                android:nestedScrollingEnabled="false"
+                android:clipToPadding="false"/>
+
+
+            <RelativeLayout
+                android:id="@+id/nearby_lay"
+                android:layout_below="@+id/rv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="People Nearby"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/txt3"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_below="@+id/nearby_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:layoutAnimation="@anim/rv_up_to_down_overshoot"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:nestedScrollingEnabled="false"
+                android:paddingLeft="10dp"
+                android:paddingBottom="60dp"
+                android:clipToPadding="false"/>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+

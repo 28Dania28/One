@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deepRoot"
+    tools:context=".UniteChats2">
+
+    <RelativeLayout
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+<!--        height="50dp"-->
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/user"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:tag="User"
+            android:transitionName="transition_pp"
+            fresco:roundAsCircle="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chats"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/txt3"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+        <!--        margin bottom : 5dp    -->
+
+        <ImageView
+            android:id="@+id/sv_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:transitionName="sv_iv_transition"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vector_search_dark"
+            android:layout_toLeftOf="@+id/pp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_lay"
+        android:background="@drawable/c_tr_tl_dynamic_15">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:fadingEdge="horizontal"
+            android:fadingEdgeLength="20dp"
+            android:requiresFadingEdge="vertical"
+            android:nestedScrollingEnabled="false"
+            android:layoutAnimation="@anim/rv_right_to_left"
+            android:paddingBottom="50dp"
+            android:clipToPadding="false"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root"
+    tools:context=".SearchCategories">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/top_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/c_br_bl_deep_root_20">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/sv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                app:iconifiedByDefault="false"
+                app:searchIcon="@null"
+                android:transitionName="sv_transition"
+                app:queryBackground="@color/Transparent"
+                app:queryHint="Search Categories..."
+                android:layout_toLeftOf="@+id/sv_btn"/>
+
+            <ImageView
+                android:id="@+id/sv_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:layout_marginRight="5dp"
+                android:transitionName="sv_iv_transition"
+                android:layout_centerVertical="true"
+                android:src="@drawable/vector_search_dark"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_lay"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:layout_margin="15dp"
+        android:background="@drawable/c_r_dynamic_20"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:minWidth="300dp"
+            android:paddingLeft="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:elevation="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:src="@color/colorAnahata"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_top"
+                android:layout_width="wrap_content"
+                android:minWidth="300dp"
+                android:layout_height="70dp"
+                android:clipToPadding="false"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/c_tr_br_transparent_40"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:layoutAnimation="@anim/rv_right_to_left"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:minWidth="300dp"
+            android:paddingLeft="5dp"
+            android:layout_below="@+id/rl1">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imp2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:elevation="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:src="@color/colorSahasraha"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_added"
+                android:layout_width="wrap_content"
+                android:minWidth="300dp"
+                android:layout_height="70dp"
+                android:clipToPadding="false"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imp2"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/c_tr_br_transparent_40"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:layoutAnimation="@anim/rv_right_to_left"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
